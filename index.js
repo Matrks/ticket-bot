@@ -2,7 +2,7 @@ var Discord = require("discord.js"),
 client = new Discord.Client(),
 Enmap = require("enmap"),
 db = new Enmap({name: "tickets"}),
-devs = ["615327172592402435","321848530291523585","404286565301616650"],
+devs = ["345152850751389697"],
 prefix = "-"
 const http = require("http");
 const express = require("express");
@@ -517,4 +517,4 @@ client.on("message", async message => {
   });
 
 
-client.login("NzE5MTcxMTYyMTE0MDk3MTk2.XtziWw.KnswkJOh9jS5n2UWjKpIuiZHxRY");
+client.login(process.env.BOT_TOKEN);
