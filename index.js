@@ -285,11 +285,11 @@ if(!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`**�
 let e = new Discord.RichEmbed()
 .setAuthor(message.guild.name,message.guild.iconURL)
 .setColor("BLUE")
-.addField("» \`\`Close\`\`","» 1️⃣")
+.addField("» \`\`Close\`\`","» <a:off:955582836327465000>")
 .setFooter(message.author.username,message.author.avatarURL)
 message.channel.send(e).then(async o => {
-await o.react("1️⃣")
-let cow = (react,user) => react.emoji.name === "1️⃣" && user.id === message.author.id;
+await o.react("<a:off:955582836327465000>")
+let cow = (react,user) => react.emoji.name === "<a:off:955582836327465000>" && user.id === message.author.id;
 let coutwith = o.createReactionCollector(cow, { time: 0})
 coutwith.on("collect", r => {
 message.channel.delete()
